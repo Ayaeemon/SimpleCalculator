@@ -2,7 +2,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [main, develop, feature/*]
+    branches: [main, develop, AyaneKatayama]
 
 # dorny/test-reporterに必要な権限追加
 permissions:
@@ -16,9 +16,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: 
+        uses: actions/checkout@v6
       - name: Set up JDK 21
-        uses: 
+        uses: actions/setup-java@v5
           java-version: "21"
           distribution: "temurin"
           cache: "gradle"
